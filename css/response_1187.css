@@ -1,0 +1,19 @@
+@media print, (max-width: 1187px) {
+
+
+    .accordion_item .head {
+        padding-left: 40px;
+    }
+    .advantages_item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+
+
+
+
+
+
+}
