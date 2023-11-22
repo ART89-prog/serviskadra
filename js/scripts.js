@@ -66,6 +66,17 @@ $(() => {
 
 
 
+	$('select').on('change', function () {
+		if (this.value == 6) {
+			$('.select-input').css('display', 'block');
+		}
+		else {
+			$('.select-input').css('display', 'none');
+		}
+	});
+
+
+
 	const gallerySliders = [],
 		gallery = document.querySelectorAll('.gallery .swiper')
 
@@ -106,7 +117,7 @@ $(() => {
 
 
 	const modalSliders = [],
-	modal = document.querySelectorAll('.modal .swiper')
+		modal = document.querySelectorAll('.modal .swiper')
 
 	modal.forEach(function (el, i) {
 		el.classList.add('modal_s' + i)

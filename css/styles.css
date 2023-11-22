@@ -1630,3 +1630,8 @@ footer {
 .modal3 .modal_title {
     margin-bottom: 28px;
 }
+
+.select-input {
+    display: none;
+    margin-top: 35px;
+}
