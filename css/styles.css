@@ -1025,10 +1025,49 @@ header .menu .item:hover a {
 
 
 
+.about {
+    padding: 73px 0 102px;
+    background: linear-gradient(0deg, #7DC8FF 0%, rgba(125, 200, 255, 0.80) 0.01%, #7DC8FF 34.38%, rgba(125, 200, 255, 0.88) 59.37%, rgba(125, 200, 255, 0.00) 96.35%);
+}
+.about_wrap {
+    padding: 37px 100px 34px 42px;
+    border-radius: 10px;
+    border-right: 5px solid #00A0E2;
+    border-bottom: 1px solid #00A0E2;
+    background: #FFF;
+    box-shadow: 0px 4px 30px 0px rgba(40, 39, 40, 0.10);
+}
+.about_logo {
+    width: 238px;
+    height: 46px;
+    display: block;
+    margin-bottom: 33px;
+}
+.about_logo img {
+    width: 100%;
+    height: 100%;
+}
+.about_wrap p {
+    color: #000;
+    font-family: "Helvetica";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.about_wrap p span {
+    font-weight: 700;
+}
+.about_wrap p + p {
+    margin-top: 20px;
+}
 
 
 
 
+.faq {
+    padding: 59px 0 100px;
+}
 .accordion_item {
     box-shadow: 0px 27px 137px rgba(0, 0, 0, 0.05);
     margin-bottom: 25px;
@@ -1041,45 +1080,34 @@ header .menu .item:hover a {
     align-items: stretch;
     justify-content: space-between;
     cursor: pointer;
-    padding-left: 62px;
+    padding: 27px;
     transition: all .2s; 
     position: relative;
     z-index: 2;
-}
-.accordion_item .head:before {
-    position: absolute;
-    content: "";
-    background: #fff;
-    transform: skewX(-20deg);
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    border-radius: 20px;
+    border-radius: 10px;
+    background: #00A0E2;
 }
 .accordion_item .head .accordion_title {
-    color: #4E4E4E;
-    font-family: var(--font_family2);
-    font-size: 20px;
+    color: #FFF;
+    font-family: "Helvetica";
+    font-size: 18px;
     font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    margin-bottom: 0;
+    font-weight: 700;
+    line-height: 150%; 
     margin-right: 20px;
-    text-align: start;
-    padding: 30px 0;
 }
 .accordion_item .data {
-    color: #4E4E4E;
-    font-family: var(--font_family2);
-    font-size: 20px;
+    color: #000;
+    font-family: "Helvetica";
+    font-size: 18px;
     font-style: normal;
     font-weight: 400;
-    line-height: normal;
-    padding: 26px 26px 26px 62px; 
-    background: #fff;
-    margin-top: 10px;
+    line-height: 150%; 
+    padding: 42px 182px 30px 27px; 
+    margin-top: -15px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background: rgba(0, 160, 226, 0.20);
 }
 .accordion .accordion_item .data {
     display: none;
@@ -1088,18 +1116,10 @@ header .menu .item:hover a {
     margin-top: 20px;
 }
 .faq_btn {
-    background: var(--text_color);
-    box-shadow: 0px 27px 137px rgba(0, 0, 0, 0.05);
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-shrink: 0;
-    width: 132px;
-    height: auto;
-    border-radius: 20px;
-    -webkit-transform: skew(-20deg);
-	-moz-transform: skew(-20deg);
-	-o-transform: skew(-20deg);   
+    flex-shrink: 0;  
 }
 .accordion_item .faq_btn img:last-child {
     display: none;
@@ -1109,10 +1129,6 @@ header .menu .item:hover a {
 }
 .accordion_item.active .faq_btn img:first-child {
     display: none;
-}
-.accordion_item .faq_btn span,
-.accordion_item .faq_btn b {
-
 }
 .accordion_item.active .faq_btn b {
     display: block;
