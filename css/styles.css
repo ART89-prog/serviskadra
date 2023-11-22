@@ -901,21 +901,64 @@ header .menu .item:hover a {
 .gallery_title {
     margin-bottom: 90px;
 }
-.gallery .swiper {
+.swiper
+{
+    overflow: visible !important;
     padding: 0 80px 50px;
 }
-.gallery .swiper-slide img {
+.swiper-slide.visible
+{
+    display: flex;
+    visibility: visible;
+
+    height: auto;
+
+    pointer-events: auto;
+
+    opacity: 1;
+
+    align-items: center;
+    justify-content: center;
+}
+.swiper-slide.active
+{
+    display: flex;
+    visibility: visible;
+
+    height: auto;
+
+    pointer-events: auto;
+
+    opacity: 1;
+
+    align-items: center;
+    justify-content: center;
+}
+.swiper-slide
+{
+    position: relative;
+
+    display: flex;
+    visibility: hidden;
+
+    width: auto;
+
+    transition: opacity .2s linear, visibility .2s linear;
+    pointer-events: none;
+
+    opacity: 0;
+
+    align-items: center;
+    justify-content: center;
+}
+.swiper-slide img {
     width: 100%;
     height: auto;
     border-radius: 10px;
+    display: block;
 }
 .gallery .swiper-slide {
-    max-width: 1020px;
     box-shadow: 0px 4px 30px 0px rgba(40, 39, 40, 0.10); 
-}
-.swiper-slide-prev,
-.swiper-slide-next {
-    visibility: hidden;
 }
 .swiper-button-prev, .swiper-rtl .swiper-button-next {
     left: 15px;
@@ -948,13 +991,36 @@ header .menu .item:hover a {
     margin-left: 10px !important;
 }
 .swiper-pagination-bullet:hover,
-.swiper-pagination-bullet.active {
+.swiper-pagination-bullet-active {
     background: #00A0E2;
 }
 
 
 
-
+.candidate {
+    padding: 20px 0 80px;
+}
+.videos_item {
+    position: relative;
+}
+.videos_item:before {
+    position: absolute;
+    content: "";
+    width: 47px;
+    height: 48px;
+    border-style: solid;
+    border-color: transparent transparent transparent #fff;
+    border-width: 24px 0 24px 47px;
+    display: inline-block;
+    height: 0;
+    width: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.client {
+    padding: 20px 0 60px;
+}
 
 
 

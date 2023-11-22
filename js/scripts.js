@@ -66,18 +66,124 @@ $(() => {
 
 
 
-	const swiper = new Swiper('.gallery .swiper', {
-		slidesPerView: 1,
-		pagination: {
-			el: '.swiper-pagination',
-			type: 'bullets',
-			clickable: true,
-		},
-		navigation: {
-			nextEl: '.swiper-button-next',
-			prevEl: '.swiper-button-prev'
-		}		
+	const gallerySliders = [],
+	gallery = document.querySelectorAll('.gallery .swiper')
+
+	gallery.forEach(function (el, i) {
+		el.classList.add('gallery_s' + i)
+
+		let options = {
+			loop: true,
+			speed: 500,
+			autoHeight: true,
+			watchSlidesProgress: true,
+			slideActiveClass: 'active',
+			slideVisibleClass: 'visible',
+			preloadImages: false,
+			breakpoints: {
+				0: {
+					spaceBetween: 0,
+					slidesPerView: 1
+				},
+				768: {
+					spaceBetween: 0,
+					slidesPerView: 1
+				}
+			},
+			pagination: {
+				el: '.gallery .swiper-pagination',
+				type: 'bullets',
+				clickable: true,
+			},
+			navigation: {
+				nextEl: '.gallery .swiper-button-next',
+				prevEl: '.gallery .swiper-button-prev'
+			}
+		}
+
+		gallerySliders.push(new Swiper('.gallery_s' + i, options))
 	})
+
+
+	const candidateSliders = [],
+	candidate = document.querySelectorAll('.candidate .swiper')
+
+	candidate.forEach(function (el, i) {
+		el.classList.add('candidate_s' + i)
+
+		let options = {
+			loop: true,
+			speed: 500,
+			autoHeight: true,
+			watchSlidesProgress: true,
+			slideActiveClass: 'active',
+			slideVisibleClass: 'visible',
+			preloadImages: false,
+			breakpoints: {
+				0: {
+					spaceBetween: 0,
+					slidesPerView: 1
+				},
+				768: {
+					spaceBetween: 17,
+					slidesPerView: 3
+				}
+			},
+			pagination: {
+				el: '.candidate .swiper-pagination',
+				type: 'bullets',
+				clickable: true,
+			},
+			navigation: {
+				nextEl: '.candidate .swiper-button-next',
+				prevEl: '.candidate .swiper-button-prev'
+			}
+		}
+
+		candidateSliders.push(new Swiper('.candidate_s' + i, options))
+	})
+
+
+
+	const clientSliders = [],
+	client = document.querySelectorAll('.client .swiper')
+
+	client.forEach(function (el, i) {
+		el.classList.add('client_s' + i)
+
+		let options = {
+			loop: true,
+			speed: 500,
+			autoHeight: true,
+			watchSlidesProgress: true,
+			slideActiveClass: 'active',
+			slideVisibleClass: 'visible',
+			preloadImages: false,
+			breakpoints: {
+				0: {
+					spaceBetween: 0,
+					slidesPerView: 1
+				},
+				768: {
+					spaceBetween: 17,
+					slidesPerView: 3
+				}
+			},
+			pagination: {
+				el: '.client .swiper-pagination',
+				type: 'bullets',
+				clickable: true,
+			},
+			navigation: {
+				nextEl: '.client .swiper-button-next',
+				prevEl: '.client .swiper-button-prev'
+			}
+		}
+
+		clientSliders.push(new Swiper('.client_s' + i, options))
+	})
+
+
 
 
 	$('input[type=tel]').inputmask('+7 (999) 999-99-99')
