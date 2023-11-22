@@ -214,7 +214,7 @@ $(() => {
 		let id = $(this).attr("href");
 
 		$("html, body").animate({
-			scrollTop: $(id).offset().top - 40
+			scrollTop: $(id).offset().top - 0
 		}, {
 			duration: 400,
 			easing: "swing"
