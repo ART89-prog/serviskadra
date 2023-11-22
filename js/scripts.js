@@ -67,7 +67,7 @@ $(() => {
 
 
 	const gallerySliders = [],
-	gallery = document.querySelectorAll('.gallery .swiper')
+		gallery = document.querySelectorAll('.gallery .swiper')
 
 	gallery.forEach(function (el, i) {
 		el.classList.add('gallery_s' + i)
@@ -105,8 +105,47 @@ $(() => {
 	})
 
 
+	const modalSliders = [],
+	modal = document.querySelectorAll('.modal .swiper')
+
+	modal.forEach(function (el, i) {
+		el.classList.add('modal_s' + i)
+
+		let options = {
+			loop: true,
+			speed: 500,
+			autoHeight: true,
+			watchSlidesProgress: true,
+			slideActiveClass: 'active',
+			slideVisibleClass: 'visible',
+			preloadImages: false,
+			breakpoints: {
+				0: {
+					spaceBetween: 0,
+					slidesPerView: 1
+				},
+				768: {
+					spaceBetween: 0,
+					slidesPerView: 1
+				}
+			},
+			pagination: {
+				el: '.modal .swiper-pagination',
+				type: 'bullets',
+				clickable: true,
+			},
+			navigation: {
+				nextEl: '.modal .swiper-button-next',
+				prevEl: '.modal .swiper-button-prev'
+			}
+		}
+
+		modalSliders.push(new Swiper('.modal_s' + i, options))
+	})
+
+
 	const candidateSliders = [],
-	candidate = document.querySelectorAll('.candidate .swiper')
+		candidate = document.querySelectorAll('.candidate .swiper')
 
 	candidate.forEach(function (el, i) {
 		el.classList.add('candidate_s' + i)
@@ -146,7 +185,7 @@ $(() => {
 
 
 	const clientSliders = [],
-	client = document.querySelectorAll('.client .swiper')
+		client = document.querySelectorAll('.client .swiper')
 
 	client.forEach(function (el, i) {
 		el.classList.add('client_s' + i)
@@ -205,6 +244,10 @@ $(() => {
 			$item.addClass('active').find('.data').slideDown(400)
 		}
 	})
+
+
+	// Кастомный select
+	$('select').niceSelect()
 
 
 
