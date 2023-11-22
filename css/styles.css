@@ -160,13 +160,12 @@ input[type=number] {
     Global styles
 -------------------*/
 :root {
-    --bg: #F6F6F5;
+    --bg: #fff;
     --scroll_width: 17px;
-    --text_color: #224FD6;
-    --font_size: 22px;
-    --font_size_title: 48px;
-    --font_family1: 'Benzin';
-    --font_family2: 'Raleway';
+    --text_color: #00A0E2;
+    --font_size: 18px;
+    --font_size_title: 45px;
+    --font_family: "Helvetica";
 }
 
 
@@ -343,11 +342,11 @@ button {
 }
 .top_block .cont {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
 }
 .top_block-phone {
-    color: #00A0E2;
-    font-family: "Helvetica";
+    color: var(--text_color);
+    font-family: var(--font_family);
     font-size: 24px;
     font-style: normal;
     font-weight: 700;
@@ -355,24 +354,38 @@ button {
     text-decoration: none;
     margin-left: auto;
     display: block;
+    transition: all .4s;
+}
+.top_block-phone:hover {
+    color: #0094d1;
 }
 .top_block-soc {
     display: flex;
-    margin-left: 43px;
+    margin-left: 50px;
     margin-right: 30px;
 }
 .top_block-soc a + a {
     margin-left: 6px;
 }
-
-.langs
-{
-    
+.top_block-soc a {
+    width: 30px;
+    height: 30px;
+    display: block;
+    top: 0;
+    position: relative;
+    transition: all .4s;
+}
+.top_block-soc a:hover {
+    top: -6px;    
+}
+.top_block-soc a img {
+    width: 100%;
+    height: 100%;
 }
 .langs .btn
 {
     color: #282728;
-    font-family: "Helvetica";
+    font-family: var(--font_family);
     font-size: 14px;
     font-style: normal;
     font-weight: 700;
@@ -386,7 +399,7 @@ button {
     white-space: nowrap;
     text-transform: uppercase;
     border-radius: 10px;
-    border: 1px solid #00A0E2;
+    border: 1px solid var(--text_color);
     padding: 10px;
     width: 90px;
     text-align: start;
@@ -441,7 +454,7 @@ button {
     padding: 22px 20px 14px;
 
     border-radius: 10px;
-    border: 1px solid #00A0E2;
+    border: 1px solid var(--text_color);
     border-top: none;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
@@ -452,7 +465,7 @@ button {
 .langs .mini_modal button
 {
     color: #282728;
-    font-family: "Helvetica";
+    font-family: var(--font_family);
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
@@ -546,12 +559,12 @@ header .menu {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 115px;
+    margin: 0 61px 115px;
 }
 header .menu .item a {
     text-decoration: none;
     color: #000;
-    font-family: "Helvetica";
+    font-family: var(--font_family);
     font-size: 24px;
     font-style: normal;
     font-weight: 400;
@@ -559,12 +572,12 @@ header .menu .item a {
     transition: all .3s;
 }
 header .menu .item.active a {
-    color: #00A0E2;
-    text-shadow: 0 0 .75px #00A0E2, 0 0 .75px #00A0E2;
+    color: var(--text_color);
+    text-shadow: 0 0 .65px var(--text_color), 0 0 .65px var(--text_color);
 }
 header .menu .item:hover a {
-    color: #00A0E2;
-    text-shadow: 0 0 .75px #00A0E2, 0 0 .75px #00A0E2;
+    color: var(--text_color);
+    text-shadow: 0 0 .65px var(--text_color), 0 0 .65px var(--text_color);
 }
 .header_logo {
     margin-bottom: 20px;
@@ -578,7 +591,7 @@ header .menu .item:hover a {
 }
 .header_title {
     color: #000;
-    font-family: "Helvetica";
+    font-family: var(--font_family);
     font-size: 50px;
     font-style: normal;
     font-weight: 700;
@@ -587,21 +600,21 @@ header .menu .item:hover a {
 }
 .header_text {
     color: #000;
-    font-family: "Helvetica";
+    font-family: var(--font_family);
     font-size: 24px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    margin-bottom: 31px;
+    margin-bottom: 37px;
 }
 .btn-page {
     width: 280px;
     height: 68px;
     border-radius: 10px;
-    background: #00A0E2;   
+    background: var(--text_color);
     color: #FFF;
-    font-family: "Helvetica";
-    font-size: 18px;
+    font-family: var(--font_family);
+    font-size: var(--font_size);
     font-style: normal;
     font-weight: 700;
     line-height: normal;
@@ -609,6 +622,10 @@ header .menu .item:hover a {
     align-items: center;
     justify-content: center;
     text-decoration: none;
+    transition: all .4s;
+}
+.btn-page:hover {
+    background: #0094d1;
 }
 .header_info ul {
     list-style: none;
@@ -617,19 +634,20 @@ header .menu .item:hover a {
 }
 .header_info ul li {
     color: #000;
-    font-family: "Helvetica";
-    font-size: 18px;
+    font-family: var(--font_family);
+    font-size: var(--font_size);
     font-style: normal;
     font-weight: 400;
     line-height: normal;  
     padding: 20px 16px;
     border-radius: 10px;
-    border-right: 5px solid #00A0E2;
-    border-bottom: 1px solid #00A0E2;
+    border-right: 5px solid var(--text_color);
+    border-bottom: 1px solid var(--text_color);
     background: #FFF;
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    min-width: 200px;
 }
 .header_info ul li + li {
     margin-left: 30px;
@@ -640,23 +658,19 @@ header .menu .item:hover a {
 
 
 .vacancy {
-    padding: 100px 0 158px;
-}
-.cont {
-}
-.vacancy_title {
+    padding: 100px 0 37px;
 }
 .title {
     color: #000;
-    font-family: "Helvetica";
-    font-size: 45px;
+    font-family: var(--font_family);
+    font-size: var(--font_size_title);
     font-style: normal;
     font-weight: 700;
     line-height: normal;
     margin-bottom: 50px;
 }
 .title span {
-    color: #00A0E2;
+    color: var(--text_color);
 }
 .vacancy_items {
     display: flex;
@@ -672,11 +686,11 @@ header .menu .item:hover a {
 .vacancy_item-title {
     padding: 22px;
     border-radius: 10px 10px 0px 0px;
-    background: #00A0E2;
+    background: var(--text_color);
     box-shadow: 0px 4px 30px 0px rgba(40, 39, 40, 0.10);
     color: #FFF;
-    font-family: "Helvetica";
-    font-size: 18px;
+    font-family: var(--font_family);
+    font-size: var(--font_size);
     font-style: normal;
     font-weight: 700;
     line-height: normal; 
@@ -684,25 +698,28 @@ header .menu .item:hover a {
 }
 .vacancy_item-text {
     color: #000;
-    font-family: "Helvetica";
-    font-size: 18px;
+    font-family: var(--font_family);
+    font-size: var(--font_size);
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    margin-bottom: 27px;
 }
 .vacancy_item-text span {
     font-weight: 700;
 }
-.vacancy_item-text p:first-child,
-.vacancy_item-text p:last-child {
-    margin-bottom: 26px;
+.vacancy_item-text p:first-child {
+    margin-bottom: 23px;
 }
 .vacancy_item-info {
-    padding: 30px;
+    padding: 31px;
     background-repeat: no-repeat;
     background-size: cover;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
+}
+.vacancy .link-more {
+    margin-top: 25px;
 }
 .vacancy_item:nth-child(1) .vacancy_item-info {
     background: linear-gradient(0deg, rgba(255, 255, 255, 0.80) 0%, rgba(255, 255, 255, 0.80) 100%), url(../images/vacancy_bg1.jpg), lightgray 0px -5.781px / 100% 129.555% no-repeat;
@@ -745,12 +762,13 @@ header .menu .item:hover a {
 }
 .social_title {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 23px;
+    line-height: 1;
 }
 .text {
     text-align: center;
     color: #000;
-    font-family: "Helvetica";
+    font-family: var(--font_family);
     font-size: 24px;
     font-style: normal;
     font-weight: 400;
@@ -759,6 +777,7 @@ header .menu .item:hover a {
 }
 .social_items {    
     display: flex;
+    justify-content: space-between;
     grid-row-gap: 30px;
     grid-column-gap: 110px;
     flex-wrap: wrap;
@@ -767,6 +786,10 @@ header .menu .item:hover a {
 }
 .social_item {    
     width: 200px;
+    transition: all .4s;
+}
+.social_item:hover {
+    transform: scale(1.15);
 }
 
 
@@ -779,10 +802,11 @@ header .menu .item:hover a {
 }
 .step_text {
     text-align: start;
+    margin-bottom: 60px;
 }
 .step_items {
     display: flex;
-    grid-row-gap: 30px;
+    grid-row-gap: 65px;
     grid-column-gap: 20px;
     flex-wrap: wrap;
     counter-reset: step;
@@ -794,7 +818,7 @@ header .menu .item:hover a {
 }
 .step_item-title {
     color: #000;
-    font-family: "Helvetica";
+    font-family: var(--font_family);
     font-size: 24px;
     font-style: normal;
     font-weight: 700;
@@ -803,8 +827,8 @@ header .menu .item:hover a {
 }
 .step_item-text {
     color: #000;
-    font-family: "Helvetica";
-    font-size: 18px;
+    font-family: var(--font_family);
+    font-size: var(--font_size);
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -813,16 +837,16 @@ header .menu .item:hover a {
     content: counter(step) "";
     counter-increment: step;
     position: absolute;
-    top: -6px;
+    top: -11px;
     left: 0;
     color: #FFF;
-    font-family: "Helvetica";
+    font-family: var(--font_family);
     font-size: 40px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
     border-radius: 10px;
-    background: #00A0E2;
+    background: var(--text_color);
     width: 50px;
     height: 50px;
     display: flex;
@@ -836,7 +860,7 @@ header .menu .item:hover a {
 
 
 .advantages {
-    padding: 65px 0 68px;
+    padding: 93px 0 68px;
     background: linear-gradient(0deg, #7DC8FF 0%, rgba(125, 200, 255, 0.80) 0.01%, rgba(125, 200, 255, 0.88) 23.44%, rgba(125, 200, 255, 0.88) 58.85%, rgba(125, 200, 255, 0.00) 96.35%);
 }
 .advantages_item-top {
@@ -844,9 +868,13 @@ header .menu .item:hover a {
     align-items: center;
     margin-bottom: 20px;
 }
+.advantages_item-top img {
+    width: 60px;
+    height: 60px;
+}
 .advantages_item-title {
     color: #000;
-    font-family: "Helvetica";
+    font-family: var(--font_family);
     font-size: 24px;
     font-style: normal;
     font-weight: 700;
@@ -855,20 +883,20 @@ header .menu .item:hover a {
 }
 .advantages_item-text {
     color: #000;
-    font-family: "Helvetica";
-    font-size: 18px;
+    font-family: var(--font_family);
+    font-size: var(--font_size);
     font-style: normal;
     font-weight: 400;
     line-height: normal;
     margin-bottom: 20px;
 }
 .advantages_item ul {
-    margin-left: 20px;
+    margin-left: 27px;
 }
 .advantages_item ul li {
     color: #000;
-    font-family: "Helvetica";
-    font-size: 18px;
+    font-family: var(--font_family);
+    font-size: var(--font_size);
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -883,8 +911,8 @@ header .menu .item:hover a {
     width: calc(100%/2 - 35px);
     padding: 31px 42px;
     border-radius: 10px;
-    border-right: 5px solid #00A0E2;
-    border-bottom: 1px solid #00A0E2;
+    border-right: 5px solid var(--text_color);
+    border-bottom: 1px solid var(--text_color);
     background: #FFF;
     box-shadow: 0px 4px 30px 0px rgba(40, 39, 40, 0.10);
 }
@@ -992,7 +1020,7 @@ header .menu .item:hover a {
 }
 .swiper-pagination-bullet:hover,
 .swiper-pagination-bullet-active {
-    background: #00A0E2;
+    background: var(--text_color);
 }
 
 
@@ -1032,8 +1060,8 @@ header .menu .item:hover a {
 .about_wrap {
     padding: 37px 100px 34px 42px;
     border-radius: 10px;
-    border-right: 5px solid #00A0E2;
-    border-bottom: 1px solid #00A0E2;
+    border-right: 5px solid var(--text_color);
+    border-bottom: 1px solid var(--text_color);
     background: #FFF;
     box-shadow: 0px 4px 30px 0px rgba(40, 39, 40, 0.10);
 }
@@ -1049,8 +1077,8 @@ header .menu .item:hover a {
 }
 .about_wrap p {
     color: #000;
-    font-family: "Helvetica";
-    font-size: 18px;
+    font-family: var(--font_family);
+    font-size: var(--font_size);
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -1085,12 +1113,12 @@ header .menu .item:hover a {
     position: relative;
     z-index: 2;
     border-radius: 10px;
-    background: #00A0E2;
+    background: var(--text_color);
 }
 .accordion_item .head .accordion_title {
     color: #FFF;
-    font-family: "Helvetica";
-    font-size: 18px;
+    font-family: var(--font_family);
+    font-size: var(--font_size);
     font-style: normal;
     font-weight: 700;
     line-height: 150%; 
@@ -1098,8 +1126,8 @@ header .menu .item:hover a {
 }
 .accordion_item .data {
     color: #000;
-    font-family: "Helvetica";
-    font-size: 18px;
+    font-family: var(--font_family);
+    font-size: var(--font_size);
     font-style: normal;
     font-weight: 400;
     line-height: 150%; 
@@ -1145,7 +1173,7 @@ header .menu .item:hover a {
 
 
 .callback {
-    background: #00A0E2;
+    background: var(--text_color);
     padding: 53px 0 52px;
     margin-bottom: 110px;
 }
@@ -1163,7 +1191,7 @@ header .menu .item:hover a {
 }
 .callback_text {
    color: #FFF;
-    font-family: "Helvetica";
+    font-family: var(--font_family);
     font-size: 24px;
     font-style: normal;
     font-weight: 400;
@@ -1181,8 +1209,8 @@ header .menu .item:hover a {
     height: 65px;
     width: 100%;
     color: rgba(0, 0, 0, 0.50);
-    font-family: "Helvetica";
-    font-size: 18px;
+    font-family: var(--font_family);
+    font-size: var(--font_size);
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -1194,15 +1222,19 @@ header .menu .item:hover a {
     width: 280px;
     height: 65px;
     color: #000;
-    font-family: "Helvetica";
-    font-size: 18px;
+    font-family: var(--font_family);
+    font-size: var(--font_size);
     font-style: normal;
     font-weight: 700;
     line-height: normal;
     background: #fff;
     border-radius: 10px;
+    transition: all .4s;
 }
-
+.callback form button:hover {
+    color: #fff;
+    background: #0241ff;
+}
 
 
 
@@ -1219,7 +1251,7 @@ footer {
 }
 .footer_copy {
     color: #8D8989;
-    font-family: "Helvetica";
+    font-family: var(--font_family);
     font-size: 14px;
     font-style: normal;
     font-weight: 300;
@@ -1239,11 +1271,11 @@ footer {
     left: 0;
     width: 80%;
     height: 1px;
-    background: #00A0E2;
+    background: var(--text_color);
 }
 .footer_links-title {
-    color: #00A0E2;
-    font-family: "Helvetica";
+    color: var(--text_color);
+    font-family: var(--font_family);
     font-size: 16px;
     font-style: normal;
     font-weight: 700;
@@ -1259,7 +1291,7 @@ footer {
 }
 .footer_left ul li {
     color: #C2C2C2;
-    font-family: "Helvetica";
+    font-family: var(--font_family);
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
@@ -1267,7 +1299,7 @@ footer {
 }
 .footer_left ul li a {
     color: #C2C2C2;
-    font-family: "Helvetica";
+    font-family: var(--font_family);
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
@@ -1276,14 +1308,14 @@ footer {
     transition: all .3s;
 }
 .footer_left ul li:hover a {
-    color: #00A0E2;
+    color: var(--text_color);
 }
 .footer_left ul li + li {
     margin-top: 4px;
 }
 .footer_right-title {
-    color: #00A0E2;
-    font-family: "Helvetica";
+    color: var(--text_color);
+    font-family: var(--font_family);
     font-size: 26px;
     font-style: normal;
     font-weight: 700;
@@ -1303,7 +1335,7 @@ footer {
 .footer_right-text {
     margin-bottom: 64px;
     color: #FFF;
-    font-family: "Helvetica";
+    font-family: var(--font_family);
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
@@ -1315,6 +1347,12 @@ footer {
 .footer_soc a {
     width: 39px;
     height: 39px;
+    position: relative;
+    top: 0;
+    transition: all .4s;
+}
+.footer_soc a:hover {
+    top: -6px;
 }
 .footer_soc a img {
     width: 100%;
