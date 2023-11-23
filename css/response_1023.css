@@ -61,19 +61,78 @@
     header .close_btn {
         display: none;
     }
+    header .menu .item a {
+        font-size: 20px;
+        line-height: 1;
+    }
+    header .menu .item {
+        margin-bottom: 24px;
+    }
+    header .menu .item:last-child {
+        margin-bottom: 0px;
+    }
+    header .menu .item.active a {
+        text-shadow: none;
+        font-weight: 700;
+    }
+    .top_block {
+        display: none;
+    }
+    .top_block-mob {
+        display: block;
+        margin: 35px auto 0;
+    }
+    .header_logo {
+        margin-bottom: 50px;
+        width: 280px;
+        height: 54px;
+    }
+    header {
+        padding: 20px 0 100px;
+    }
+    header .mob_menu_btn {
+        position: absolute;
+        top: 30px;
+        right: 20px;
+    }
     .menu_open header .close_btn {
         display: block;
-        top: 0px;
+        top: 20px;
         right: 20px;
         z-index: 999;
         position: absolute;
     }
-    header .menu .item a {
-        font-size: 26px;
-        line-height: 1.5;
-        text-transform: uppercase;
+    .header_logo-mob {
+        display: block;
+        width: 280px;
+        height: 54px;
+        margin-bottom: 110px;
     }
-   
+    .header_logo-mob img {
+        width: 100%;
+        height: 100%;
+    }
+    header .menu {
+        padding: 20px 36px 52px;
+    }
+    .top_block-mob .langs {
+        position: absolute;
+        top: 100px;
+        left: 36px;
+    }
+    .top_block-phone {
+        font-size: 38px;
+        margin-bottom: 28px;
+    }
+    .top_block-soc {
+        margin-left: auto;
+        margin-right: auto;
+        justify-content: space-between;
+    }
+    .top_block-soc a {
+        width: 42px;
+        height: 42px;
+    }
 
     
 

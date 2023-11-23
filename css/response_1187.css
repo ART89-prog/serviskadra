@@ -1,6 +1,9 @@
 @media print, (max-width: 1187px) {
 
-
+    .footer_right-title:before {
+        bottom: -103px;
+        right: -13px;
+    }
 
 
 

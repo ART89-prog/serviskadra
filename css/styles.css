@@ -335,7 +335,9 @@ button {
 
 
 
-
+.top_block-mob {
+    display: none;
+}
 .top_block {
     padding: 24px 0 30px;
     background: #fff;
@@ -355,6 +357,7 @@ button {
     margin-left: auto;
     display: block;
     transition: all .4s;
+    white-space: nowrap;
 }
 .top_block-phone:hover {
     color: #0094d1;
@@ -528,22 +531,9 @@ header .close_btn {
     z-index: 103;
 }
 
-header .close_btn {
-    width: 49px;
-    height: 49px;
-    background: #FFFFFF;
-    opacity: 0.3;
-    border: 1px solid #FFB800;
-    border-radius: 4px;
-    display: none;
-    align-items: center;
-    justify-content: center;
-}
-
 header .close_btn img {
     display: block;
     margin: 0 auto;
-    width: 50%;
 }
 
 header {
@@ -554,7 +544,9 @@ header {
     background-repeat: repeat;
     background-size: cover;
 }
-
+.header_logo-mob {
+    display: none;
+}
 header .menu {
     display: flex;
     align-items: center;
