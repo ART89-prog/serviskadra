@@ -269,33 +269,78 @@ $(() => {
 	$('select').niceSelect()
 
 
-	const input1 = document.querySelector("#phone1");
-	window.intlTelInput(input1, {
-		utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/js/utils.js",
-		separateDialCode: true,
-		customPlaceholder: function (selectedCountryData) {
-			return "Телефон";
-		},
+
+	$(document).ready(function () {
+		var phoneInputID = "#phone1";
+		var input = document.querySelector(phoneInputID);
+		var iti = window.intlTelInput(input, {
+			formatOnDisplay: true,
+			hiddenInput: "full_number",
+			separateDialCode: true,
+			preferredCountries: ['es'],
+			utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.14/js/utils.js"
+		});
+		$(phoneInputID).on("countrychange", function (event) {
+			var selectedCountryData = iti.getSelectedCountryData();
+			newPlaceholder = intlTelInputUtils.getExampleNumber(selectedCountryData.iso2, true, intlTelInputUtils.numberFormat.INTERNATIONAL),
+				iti.setNumber("");
+			mask = newPlaceholder.replace(/[1-9]/g, "0");
+			$(this).mask(mask);
+		});
+
+		iti.promise.then(function () {
+			$(phoneInputID).trigger("countrychange");
+		});
 	});
 
-	const input2 = document.querySelector("#phone2");
-	window.intlTelInput(input2, {
-		utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/js/utils.js",
-		separateDialCode: true,
-		customPlaceholder: function (selectedCountryData) {
-			return "Телефон";
-		},
+
+	$(document).ready(function () {
+		var phoneInputID = "#phone2";
+		var input = document.querySelector(phoneInputID);
+		var iti = window.intlTelInput(input, {
+			formatOnDisplay: true,
+			hiddenInput: "full_number",
+			separateDialCode: true,
+			preferredCountries: ['es'],
+			utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.14/js/utils.js"
+		});
+		$(phoneInputID).on("countrychange", function (event) {
+			var selectedCountryData = iti.getSelectedCountryData();
+			newPlaceholder = intlTelInputUtils.getExampleNumber(selectedCountryData.iso2, true, intlTelInputUtils.numberFormat.INTERNATIONAL),
+				iti.setNumber("");
+			mask = newPlaceholder.replace(/[1-9]/g, "0");
+			$(this).mask(mask);
+		});
+
+		iti.promise.then(function () {
+			$(phoneInputID).trigger("countrychange");
+		});
 	});
 
-	const input3 = document.querySelector("#phone3");
-	window.intlTelInput(input3, {
-		utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/js/utils.js",
-		separateDialCode: true,
-		customPlaceholder: function (selectedCountryData) {
-			return "Телефон";
-		},
-	});
 
+
+	$(document).ready(function () {
+		var phoneInputID = "#phone3";
+		var input = document.querySelector(phoneInputID);
+		var iti = window.intlTelInput(input, {
+			formatOnDisplay: true,
+			hiddenInput: "full_number",
+			separateDialCode: true,
+			preferredCountries: ['es'],
+			utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.14/js/utils.js"
+		});
+		$(phoneInputID).on("countrychange", function (event) {
+			var selectedCountryData = iti.getSelectedCountryData();
+			newPlaceholder = intlTelInputUtils.getExampleNumber(selectedCountryData.iso2, true, intlTelInputUtils.numberFormat.INTERNATIONAL),
+				iti.setNumber("");
+			mask = newPlaceholder.replace(/[1-9]/g, "0");
+			$(this).mask(mask);
+		});
+
+		iti.promise.then(function () {
+			$(phoneInputID).trigger("countrychange");
+		});
+	});
 
 
 
