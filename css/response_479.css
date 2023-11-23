@@ -71,6 +71,9 @@
     .modal_bottom-phone {
         width: 100%;
     }
+    .step_items > * {
+        padding-left: 77px;
+    }
 
 
 

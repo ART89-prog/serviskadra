@@ -243,7 +243,12 @@
     .accordion_item .data {
         padding: 25px 27px 35px;
     }
-    
+    .langs .mini_modal {
+        right: 0;
+    }
+
+
+
 
     
 }

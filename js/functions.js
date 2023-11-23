@@ -61,7 +61,7 @@ setTimeout(() => {
 			$(this).removeClass('active')
 			$('.mini_modal').removeClass('active')
 
-			// if (is_touch_device()) $('body').css('cursor', 'default')
+			if (is_touch_device()) $('body').css('cursor', 'default')
 		} else {
 			$('.mini_modal_btn').removeClass('active')
 			$(this).addClass('active')
@@ -69,7 +69,7 @@ setTimeout(() => {
 			$('.mini_modal').removeClass('active')
 			$(modalId).addClass('active')
 
-			// if (is_touch_device()) $('body').css('cursor', 'pointer')
+			if (is_touch_device()) $('body').css('cursor', 'pointer')
 		}
 	})
 
@@ -78,7 +78,7 @@ setTimeout(() => {
 		if ($(e.target).closest('.modal_cont').length === 0) {
 			$('.mini_modal, .mini_modal_btn').removeClass('active')
 
-			// if (is_touch_device()) $('body').css('cursor', 'default')
+			if (is_touch_device()) $('body').css('cursor', 'default')
 		}
 	})
 
