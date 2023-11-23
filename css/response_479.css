@@ -83,6 +83,18 @@
     .header_info ul li {
         font-size: 14px;
     }
+    .footer_right-title {
+        margin-bottom: 9px;
+    }
+    .footer_right-title:before {
+        position: absolute;
+        content: "";
+        width: 122px;
+        height: 131px;
+        background: url(../images/footer_arrow2.png);
+        bottom: -100px;
+        right: -57px;
+    }
 
 
 

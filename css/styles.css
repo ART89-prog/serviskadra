@@ -1644,3 +1644,33 @@ footer {
     display: none;
     margin-top: 35px;
 }
+
+
+.floating-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    border-radius: 10px 0px 0px 10px;
+    background: #00A0E2;  
+    width: 470px;
+    height: 84px;
+    position: fixed;
+    right: 0;
+    bottom: 50px;
+    z-index: 9999;
+}
+.floating-button img {
+    width: 45px;
+    height: 45px;
+    display: block;
+    margin-right: 20px;
+}
+.floating-button span {
+    color: #FFF;
+    font-family: var(--font_family);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;   
+}
