@@ -2,7 +2,11 @@
 
     .footer_right-title:before {
         bottom: -103px;
-        right: -13px;
+        right: -27px;
+        width: 148px;
+        height: 170px;
+        background-size: contain;
+        background-repeat: no-repeat;
     }
 
 
