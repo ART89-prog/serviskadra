@@ -725,6 +725,12 @@ header .menu .item:hover a {
 .vacancy_item:nth-child(4) .vacancy_item-info {
     background: linear-gradient(0deg, rgba(255, 255, 255, 0.80) 0%, rgba(255, 255, 255, 0.80) 100%), url(../images/vacancy_bg4.jpg), lightgray 0px -5.781px / 100% 129.555% no-repeat;
 }
+.vacancy_item:nth-child(5) .vacancy_item-info {
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.80) 0%, rgba(255, 255, 255, 0.80) 100%), url(../images/vacancy_bg1.jpg), lightgray 0px -5.781px / 100% 129.555% no-repeat;
+}
+.vacancy_item:nth-child(6) .vacancy_item-info {
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.80) 0%, rgba(255, 255, 255, 0.80) 100%), url(../images/vacancy_bg2.jpg), lightgray 0px -5.781px / 100% 129.555% no-repeat;
+}
 .vacancy_item .btn-page {
     height: 65px;
 }
