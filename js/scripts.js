@@ -86,11 +86,11 @@ $(() => {
 		let options = {
 			loop: true,
 			speed: 500,
-			autoHeight: true,
 			watchSlidesProgress: true,
 			slideActiveClass: 'active',
 			slideVisibleClass: 'visible',
 			preloadImages: false,
+			lazy: true,
 			breakpoints: {
 				0: {
 					spaceBetween: 0,
@@ -125,11 +125,11 @@ $(() => {
 		let options = {
 			loop: true,
 			speed: 500,
-			autoHeight: true,
 			watchSlidesProgress: true,
 			slideActiveClass: 'active',
 			slideVisibleClass: 'visible',
 			preloadImages: false,
+			lazy: true,
 			breakpoints: {
 				0: {
 					spaceBetween: 0,
@@ -164,11 +164,11 @@ $(() => {
 		let options = {
 			loop: true,
 			speed: 500,
-			autoHeight: true,
 			watchSlidesProgress: true,
 			slideActiveClass: 'active',
 			slideVisibleClass: 'visible',
 			preloadImages: false,
+			lazy: true,
 			breakpoints: {
 				0: {
 					spaceBetween: 0,
@@ -208,11 +208,11 @@ $(() => {
 		let options = {
 			loop: true,
 			speed: 500,
-			autoHeight: true,
 			watchSlidesProgress: true,
 			slideActiveClass: 'active',
 			slideVisibleClass: 'visible',
 			preloadImages: false,
+			lazy: true,
 			breakpoints: {
 				0: {
 					spaceBetween: 0,
