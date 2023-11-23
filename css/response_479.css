@@ -74,6 +74,15 @@
     .step_items > * {
         padding-left: 77px;
     }
+    .vacancy_item-text {
+        font-size: 14px;
+    }
+    .vacancy_item-text p:first-child {
+        margin-bottom: 15px;
+    }
+    .header_info ul li {
+        font-size: 14px;
+    }
 
 
 
