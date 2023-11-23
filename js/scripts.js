@@ -244,7 +244,7 @@ $(() => {
 
 
 
-	$('input[type=tel]').inputmask('+7 (999) 999-99-99')
+	// $('input[type=tel]').inputmask('+7 (999) 999-99-99')
 
 
 	// Аккордион
@@ -267,6 +267,34 @@ $(() => {
 
 	// Кастомный select
 	$('select').niceSelect()
+
+
+	const input1 = document.querySelector("#phone1");
+	window.intlTelInput(input1, {
+		utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/js/utils.js",
+		separateDialCode: true,
+	});
+
+	const input2 = document.querySelector("#phone2");
+	window.intlTelInput(input2, {
+		utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/js/utils.js",
+		separateDialCode: true,
+	});
+
+	const input3 = document.querySelector("#phone3");
+	window.intlTelInput(input3, {
+		utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/js/utils.js",
+		separateDialCode: true,
+	});
+
+
+	$(window).scroll(function(){
+		if($(window).scrollTop()>660){
+			$('.floating-button').fadeIn(900)
+		}else{
+			$('.floating-button').fadeOut(700)
+		}
+	});
 
 
 

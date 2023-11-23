@@ -95,6 +95,13 @@
         bottom: -100px;
         right: -57px;
     }
+    .radio_box {
+        display: flex;
+        justify-content: space-between;
+    }
+    .radio_block label {
+        margin-right: 0px;
+    }
 
 
 

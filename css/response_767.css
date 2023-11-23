@@ -187,7 +187,10 @@
     .header_info ul li {
         font-size: 16px;
     }
-
+    .floating-button {
+        display: none;
+    }
+ 
 
 
 
