@@ -1,8 +1,8 @@
 @media print, (max-width: 767px) {
 
     :root {
-        --font_size_title: 28px;
-        --font_size: 16px;
+        --font_size_title: 30px;
+        --font_size: 18px;
     }
 
     .header_logo-mob {
@@ -19,6 +19,58 @@
     }
     .menu_open header .close_btn {
         top: 0px;
+    }
+
+    header {
+        background-position: 70% center;
+    }
+    .header_title {
+        font-size: 30px;
+        margin-bottom: 16px;
+    }
+    .header_text {
+        font-size: 18px;
+        margin-bottom: 123px;
+    }
+    .header_info ul {
+        flex-direction: column;
+    }
+    .header_info ul li {
+        width: 200px;
+        padding: 14px 20px;
+    }
+    .header_info ul li + li {
+        margin-left: 0px;
+        margin-top: 10px;
+    }
+    header {
+        padding: 20px 0 43px;
+    }
+    .title {
+        text-align: center;
+    }
+    .vacancy_items {
+        grid-row-gap: 30px;
+        grid-column-gap: 0px;
+    }
+    .vacancy_items > * {
+        width: 100%;
+    }
+    .vacancy_item-info {
+        padding: 30px;
+    }
+    .text {
+        font-size: 18px;
+    }
+    .step_items {
+        grid-row-gap: 20px;
+        grid-column-gap: 0px;
+    }
+    .step_items > * {
+        width: 100%;
+    }
+    .step_item-title {
+        margin-bottom: 10px;
     }
 
     

@@ -174,6 +174,10 @@ $(() => {
 					spaceBetween: 0,
 					slidesPerView: 1
 				},
+				479: {
+					spaceBetween: 17,
+					slidesPerView: 2
+				},
 				768: {
 					spaceBetween: 17,
 					slidesPerView: 3
@@ -213,6 +217,10 @@ $(() => {
 				0: {
 					spaceBetween: 0,
 					slidesPerView: 1
+				},
+				479: {
+					spaceBetween: 17,
+					slidesPerView: 2
 				},
 				768: {
 					spaceBetween: 17,
