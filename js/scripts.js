@@ -273,28 +273,29 @@ $(() => {
 	window.intlTelInput(input1, {
 		utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/js/utils.js",
 		separateDialCode: true,
+		customPlaceholder: function (selectedCountryData) {
+			return "Телефон";
+		},
 	});
 
 	const input2 = document.querySelector("#phone2");
 	window.intlTelInput(input2, {
 		utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/js/utils.js",
 		separateDialCode: true,
+		customPlaceholder: function (selectedCountryData) {
+			return "Телефон";
+		},
 	});
 
 	const input3 = document.querySelector("#phone3");
 	window.intlTelInput(input3, {
 		utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/js/utils.js",
 		separateDialCode: true,
+		customPlaceholder: function (selectedCountryData) {
+			return "Телефон";
+		},
 	});
 
-
-	$(window).scroll(function(){
-		if($(window).scrollTop()>660){
-			$('.floating-button').fadeIn(900)
-		}else{
-			$('.floating-button').fadeOut(700)
-		}
-	});
 
 
 

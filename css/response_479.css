@@ -102,7 +102,9 @@
     .radio_block label {
         margin-right: 0px;
     }
-
+    .radio_block-label {
+        margin-bottom: 22px;
+    }
 
 
 }
